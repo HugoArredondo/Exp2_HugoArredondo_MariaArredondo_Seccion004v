@@ -56,9 +56,11 @@ export class RegistroPage implements OnInit {
         message: 'Tienens que llenar todos los datos',
         buttons: ['Aceptar']
       });
-
       await alert.present();
       return;
+    }
+    else{
+      this.onSubmit();
     }
 
     var usuario = {

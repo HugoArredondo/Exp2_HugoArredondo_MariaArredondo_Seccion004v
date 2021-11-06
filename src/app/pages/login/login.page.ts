@@ -46,8 +46,8 @@ export class LoginPage implements OnInit {
       await alert.present();
     }
   }
-  onSubmit(){
-    console.log('submit');
-    console.log(this.login);
-  }
+  // onSubmit(){
+  //   console.log('submit');
+  //   console.log(this.login);
+  // }
 }

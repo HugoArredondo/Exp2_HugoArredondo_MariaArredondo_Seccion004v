@@ -19,7 +19,7 @@
       </ion-card-header>
       <ion-card-content>
         <div class="formulario">
-          <form #formulario="ngForm" (ngSubmit) ="onSubmit()" [formGroup]="formularioLogin">
+          <form #formulario="ngForm" [formGroup]="formularioLogin">
             <ion-item>
               <ion-label  position="floating">Usuario</ion-label>
               <ion-input  type="text" formControlName="user" 
