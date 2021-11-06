@@ -19,12 +19,12 @@
       </ion-card-header>
       <ion-card-content>
         <div class="formulario">
-          <form [formGroup]="formularioRegistro">
+          <form #formulario="ngForm" (ngSubmit) ="onSubmit()" [formGroup]="formularioRegistro">
 
             <ion-item>
               <ion-label>Nombre: </ion-label>
               <ion-input  type="text" placeholder="Nombre y Apellido"
-                          formControlName="nombre"
+                          formControlName="nombre" [(ngModel)]= "newDato.nombre"
                           autofocus>
               </ion-input>
             </ion-item>
@@ -32,10 +32,10 @@
             <ion-item>
               <ion-label>Rut: </ion-label>
               <ion-input  type="number" name="rut"
-                          placeholder="11111111" 
+                          placeholder="11111111" [(ngModel)]= "newDato.rut"
                           formControlName="rut">
               </ion-input>-
-              <ion-input  type="text"
+              <ion-input  type="text" [(ngModel)]= "newDato.dv"
                           placeholder="1" 
                           formControlName="dv">
               </ion-input>
@@ -45,20 +45,20 @@
               <ion-label>Correo: </ion-label>
               <ion-input  type="email" name="email" placeholder="correo@mail.com"
                           pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
-                          formControlName="email">
+                          formControlName="email" [(ngModel)]= "newDato.email">
               </ion-input>
             </ion-item>
     
             <ion-item>
               <ion-label>Usuario: </ion-label>
-              <ion-input  type="text" name="user"
+              <ion-input  type="text" name="user" [(ngModel)]= "newDato.user"
                           formControlName="user">
               </ion-input>
             </ion-item>
     
             <ion-item>
               <ion-label>Contraseña: </ion-label>
-              <ion-input  type="password"
+              <ion-input  type="password" [(ngModel)]= "newDato.pass"
                           formControlName="pass">
               </ion-input>
             </ion-item>        

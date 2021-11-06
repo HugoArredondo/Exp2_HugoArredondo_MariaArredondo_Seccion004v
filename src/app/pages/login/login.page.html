@@ -19,14 +19,19 @@
       </ion-card-header>
       <ion-card-content>
         <div class="formulario">
-          <form [formGroup]="formularioLogin">
+          <form #formulario="ngForm" (ngSubmit) ="onSubmit()" [formGroup]="formularioLogin">
             <ion-item>
-              <ion-label position="floating">Usuario</ion-label>
-              <ion-input type="text" formControlName="user"></ion-input>
+              <ion-label  position="floating">Usuario</ion-label>
+              <ion-input  type="text" formControlName="user" 
+                          [(ngModel)]= "login.user">
+              </ion-input>
             </ion-item>
             <ion-item>
-              <ion-label position="floating">Contraseña</ion-label>
-              <ion-input type="password" formControlName="pass"></ion-input>
+              <ion-label  position="floating">Contraseña</ion-label>
+              <ion-input  type="password" formControlName="pass"
+                          [(ngModel)]= "login.pass">
+                
+              </ion-input>
             </ion-item>
           </form>
           <div class="botones">

@@ -9,14 +9,14 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
   styleUrls: ['./registro.page.scss'],
 })
 export class RegistroPage implements OnInit {
-  // registro = {
-  //   nombre:'',
-  //   rut:'',
-  //   dv:'',
-  //   email:'',
-  //   user: '',
-  //   pass: '',
-  // }
+  registro = {
+    nombre:'',
+    rut:'',
+    dv:'',
+    email:'',
+    user: '',
+    pass: '',
+  }
 
   formularioRegistro: FormGroup;
 
@@ -111,10 +111,10 @@ export class RegistroPage implements OnInit {
   //     this.navCtrl.navigateRoot('inicio');
   // }
 
-  // onSubmit(){
-  //   console.log('submit');
-  //   console.log(this.newDato);
-  // }
+  onSubmit(){
+    console.log('submit');
+    console.log(this.newDato);
+  }
 
   //get
   loadDatos(){
@@ -134,25 +134,25 @@ export class RegistroPage implements OnInit {
     });
   }
 
-  //update
-  updateDatos(dato: Datos ){
-    dato.nombre = `${dato.nombre} ¡Actualizado!`;
-    dato.modified = Date.now();
-    this.storageService.updateDatos(dato).then(item=>{
-      this.showToast('¡Registro actualizado!')
-      this.myList.closeSlidingItems();
-      this.loadDatos();
-    });
-  } 
+  // //update
+  // updateDatos(dato: Datos ){
+  //   dato.nombre = `${dato.nombre} ¡Actualizado!`;
+  //   dato.modified = Date.now();
+  //   this.storageService.updateDatos(dato).then(item=>{
+  //     this.showToast('¡Registro actualizado!')
+  //     this.myList.closeSlidingItems();
+  //     this.loadDatos();
+  //   });
+  // } 
 
-  //delete
-  deleteDatos(dato: Datos){
-    this.storageService.deleteDatos(dato.id).then(item=>{
-      this.showToast('¡Registro eliminado');
-      this.myList.closeSlidingItems();
-      this.loadDatos();
-    });
-  }
+  // //delete
+  // deleteDatos(dato: Datos){
+  //   this.storageService.deleteDatos(dato.id).then(item=>{
+  //     this.showToast('¡Registro eliminado');
+  //     this.myList.closeSlidingItems();
+  //     this.loadDatos();
+  //   });
+  // }
 
   async showToast(msg){
     const toast = await this.toastController.create({

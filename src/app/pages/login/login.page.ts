@@ -8,10 +8,10 @@ import { AlertController, NavController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  // login = {
-  //   user: '',
-  //   pass: '',
-  // }
+  login = {
+    user: '',
+    pass: '',
+  }
 
   formularioLogin: FormGroup;
 
@@ -46,8 +46,8 @@ export class LoginPage implements OnInit {
       await alert.present();
     }
   }
-  // onSubmit(){
-  //   console.log('submit');
-  //   console.log(this.login);
-  // }
+  onSubmit(){
+    console.log('submit');
+    console.log(this.login);
+  }
 }

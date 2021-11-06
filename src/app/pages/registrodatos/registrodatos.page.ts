@@ -32,15 +32,15 @@ export class RegistrodatosPage implements OnInit {
   }
 
   //create
-  addDatos(){
-    this.newDato.modified = Date.now();
-    this.newDato.id = Date.now();
-    this.storageService.addDatos(this.newDato).then(dato=>{
-      this.newDato = <Datos>{};
-      this.showToast('¡Registro realizado correctamente!');
-      this.loadDatos();
-    });
-  }
+  // addDatos(){
+  //   this.newDato.modified = Date.now();
+  //   this.newDato.id = Date.now();
+  //   this.storageService.addDatos(this.newDato).then(dato=>{
+  //     this.newDato = <Datos>{};
+  //     this.showToast('¡Registro realizado correctamente!');
+  //     this.loadDatos();
+  //   });
+  // }
 
   //update
   updateDatos(dato: Datos ){
