@@ -34,16 +34,21 @@ export class LoginPage implements OnInit {
     if(usuario.user == f.user && usuario.pass == f.pass){
       console.log('Ingresado');
       localStorage.setItem('ingresado','true');
+      const alert = await this.alertController.create({
+        header: 'Bienvenido',
+        message: '¡Bienvenid@ '+usuario.nombre+' a EducTips!',
+        buttons: ['Aceptar']
+      });
+      await alert.present();
       this.navCtrl.navigateRoot('inicio');
     }
     else{
-      const alert = await this.alertController.create({
+      const alert2 = await this.alertController.create({
         header: 'Datos Incorrectos',
         message: 'Los datos que ingresaste son incorrectos',
         buttons: ['Aceptar']
       });
-
-      await alert.present();
+      await alert2.present();
     }
   }
   // onSubmit(){

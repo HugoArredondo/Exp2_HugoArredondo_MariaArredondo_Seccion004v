@@ -25,18 +25,18 @@
               <ion-label>Nombre: </ion-label>
               <ion-input  type="text" placeholder="Nombre y Apellido"
                           formControlName="nombre" [(ngModel)]= "newDato.nombre"
-                          autofocus>
+                          autocapitalize>
               </ion-input>
             </ion-item>
         
             <ion-item>
               <ion-label>Rut: </ion-label>
-              <ion-input  type="number" name="rut"
+              <ion-input  type="number" name="rut" maxlength="8"
                           placeholder="11111111" [(ngModel)]= "newDato.rut"
                           formControlName="rut">
               </ion-input>-
               <ion-input  type="text" [(ngModel)]= "newDato.dv"
-                          placeholder="1" 
+                          placeholder="1" maxlength="1"
                           formControlName="dv">
               </ion-input>
             </ion-item>

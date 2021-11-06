@@ -25,7 +25,7 @@
               <ion-label>Nombre: </ion-label>
               <ion-input type="text" placeholder="Nombre"
                          name="nombre" [(ngModel)]= "suscripcion.nombre"
-                         formControlName="nombre">
+                         formControlName="nombre" autocapitalize>
               </ion-input>
             </ion-item>
         
@@ -33,18 +33,20 @@
               <ion-label>Rut: </ion-label>
               <ion-input type="number" placeholder="11222333"
                          name="rut" [(ngModel)]= "suscripcion.rut"
-                         formControlName="rut">
+                         formControlName="rut" maxlength="8">
               </ion-input>-
               <ion-input type="text" placeholder="1"
                           name="dv" [(ngModel)]= "suscripcion.dv"
-                          formControlName="dv"></ion-input>
+                          formControlName="dv"
+                          maxlength="1">
+              </ion-input>
             </ion-item>
       
             <ion-item>
               <ion-label>Teléfono: </ion-label>
               <ion-input type="number" placeholder="9 9999 9999"
                          name="phono" [(ngModel)]= "suscripcion.phono"
-                         formControlName="phono">
+                         formControlName="phono" maxlength="9">
               </ion-input>
             </ion-item>
       
